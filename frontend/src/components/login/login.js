@@ -12,21 +12,25 @@ export default function Login() {
   function loggin(){
     if(usernameState===username && passwordState===password){
       setLoggin(true);
+      alert('logged in');
+    }else{
+      setLoggin(false);
+      alert('Incorrect Login details');
     }
-  }
-
-  const popUp=()=>{
-    alert('logged in');
   }
   return (
     
     <div className='LoginForm'>
+        <h2>Login Form</h2>
         <label>username: </label>
         <input type='text' onChange={(event)=>{setUsernameState(event.target.value)}}/>
         <label>password: </label>
-        <input type='password' onChange={(event)=>{setPasswordState(event.target.value)}}/>
+        <input type='password' onChange={(event)=>{setPasswordState(event.target.value)
+          console.log(passwordState)
+        }}/>
         <button onClick={loggin}>Login</button>
-        {loggedIn && popUp()}
+        {loggedIn ? <h2>Hello</h2> : <h2>Nigga</h2>}
+        
     </div>
     
   );
