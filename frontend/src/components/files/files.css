@@ -1,0 +1,13 @@
+.Files{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    width: 100px;
+}
+
+button{
+    width: 100px;
+}
